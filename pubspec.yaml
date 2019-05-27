@@ -1,5 +1,5 @@
 name: password_strength
-description: A password strength estimator.
+description: A password strength estimator. Can be used to show the user whether the password they chose is strong against bruteforce or dictionary attacks.
 version: 0.1.0
 author: Julien Scholz <julienscholzo@hotmail.de>
 homepage: https://github.com/Pikaju/FlutterBraintree
