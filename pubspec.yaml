@@ -1,6 +1,8 @@
 name: password_strength
 description: A password strength estimator.
 version: 0.1.0
+author: Julien Scholz <julienscholzo@hotmail.de>
+homepage: https://github.com/Pikaju/FlutterBraintree
 
 environment:
   sdk: '>=2.1.0 <3.0.0'
