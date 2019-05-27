@@ -1,0 +1,9 @@
+name: password_strength
+description: A password strength estimator.
+version: 0.1.0
+
+environment:
+  sdk: '>=2.1.0 <3.0.0'
+
+dev_dependencies:
+  test: ^1.6.3
