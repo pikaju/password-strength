@@ -9,15 +9,15 @@ double estimateBruteforceStrength(String password) {
   if (RegExp(r'^[a-z]*$').hasMatch(password))
     charsetBonus = 1.0;
   else if (RegExp(r'^[a-z0-9]*$').hasMatch(password))
-    charsetBonus = 1.3;
+    charsetBonus = 1.2;
   else if (RegExp(r'^[a-zA-Z]*$').hasMatch(password))
-    charsetBonus = 1.5;
+    charsetBonus = 1.3;
   else if (RegExp(r'^[a-z\-_!?]*$').hasMatch(password))
-    charsetBonus = 1.5;
+    charsetBonus = 1.3;
   else if (RegExp(r'^[a-zA-Z0-9]*$').hasMatch(password))
-    charsetBonus = 1.8;
+    charsetBonus = 1.5;
   else
-    charsetBonus = 2.0;
+    charsetBonus = 1.8;
 
   final logisticFunction = (double x) {
     return 1.0 / (1.0 + exp(-x));
