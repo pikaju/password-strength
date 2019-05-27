@@ -15,16 +15,16 @@ double estimateBruteforceStrength(String password) {
   else if (RegExp(r'^[a-z\-_!?]*$').hasMatch(password))
     charsetBonus = 1.5;
   else if (RegExp(r'^[a-zA-Z0-9]*$').hasMatch(password))
-    charsetBonus = 2.0;
+    charsetBonus = 1.8;
   else
-    charsetBonus = 2.5;
+    charsetBonus = 2.0;
 
   final logisticFunction = (double x) {
     return 1.0 / (1.0 + exp(-x));
   };
 
   final curve = (double x) {
-    return logisticFunction((x / 4.0) - 4.0);
+    return logisticFunction((x / 3.0) - 4.0);
   };
 
   return curve(password.length * charsetBonus);

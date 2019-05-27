@@ -13,9 +13,31 @@ void main() {
       'nRR',
       'jk2O',
       'TcIT',
-      'Io1IA',
-      'M5U6b',
-      'yPAWY',
+      'keklel',
+      'test12',
+      'A_#2',
+    ];
+    passwords.forEach((String password) {
+      test('"$password" is a weak password', () {
+        expect(estimatePasswordStrength(password), lessThan(0.2));
+      });
+    });
+  });
+
+  group('Very common passwords get a low estimate', () {
+    final passwords = [
+      '123456',
+      'password',
+      'cookie',
+      'delilah',
+      'president',
+      '31011987',
+      'masterp',
+      'shady',
+      'brady',
+      'alexis',
+      'passw0rd',
+      'pikachu',
     ];
     passwords.forEach((String password) {
       test('"$password" is a weak password', () {
@@ -26,10 +48,10 @@ void main() {
 
   group('Secure random passwords get a high estimate', () {
     final passwords = [
-      'IhA6rCt2YlsSlOWH',
-      '9wm034xE5t6iilCxs8',
-      'aZOanh8tJN0W6wEjwTW',
-      'EQcN89CYHQZ4kdivgtpb',
+      'IhA6rCt2YlOWH',
+      '9wm034xE5tlCxs8',
+      'aZOanh8tJN6wEjwTW',
+      'EQcN89CYHQkdivgtpb',
       'fShXdncLQa74G6V9cS6X',
       'yIS4XEFNvgQBPVTozaCb',
       'HIAmBvaFU5SeFYCYlJIyFNJ4O24x',
