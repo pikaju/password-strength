@@ -4,6 +4,8 @@ import 'dart:math';
 /// The passwords length as well as the characters use are taken into
 /// consideration.
 double estimateBruteforceStrength(String password) {
+  if (password.isEmpty) return 0.0;
+
   // Check which types of characters are used and create an opinionated bonus.
   double charsetBonus;
   if (RegExp(r'^[a-z]*$').hasMatch(password)) {
