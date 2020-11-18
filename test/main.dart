@@ -63,4 +63,37 @@ void main() {
       });
     });
   });
+
+  test('Number passwords get a low estimate than alphabet passwords', () {
+    final numberPasswords = [
+      '3713735029',
+      '3404116161',
+      '8314446701',
+      '1418240422',
+      '2096970006',
+      '1405300384',
+      '3390615094',
+      '1913955059',
+      '7102366355',
+      '5236310782',
+    ];
+    final alphabetPasswords = [
+      'qnlumxlqma',
+      'xsocpyxxpa',
+      'madwnhbgrw',
+      'ioisxccnns',
+      'hniasnelam',
+      'ixopbqvssn',
+      'jffehizflz',
+      'wyqlwtpjte',
+      'iikzzpwdgv',
+      'frgcrwsswz',
+    ];
+    numberPasswords.forEach((String numberPassword) {
+      alphabetPasswords.forEach((String alphabetPassword) {
+        expect(estimatePasswordStrength(numberPassword),
+            lessThan(estimatePasswordStrength(alphabetPassword)));
+      });
+    });
+  });
 }

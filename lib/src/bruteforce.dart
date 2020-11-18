@@ -8,7 +8,9 @@ double estimateBruteforceStrength(String password) {
 
   // Check which types of characters are used and create an opinionated bonus.
   double charsetBonus;
-  if (RegExp(r'^[a-z]*$').hasMatch(password)) {
+  if (RegExp(r'^[0-9]*$').hasMatch(password)) {
+    charsetBonus = 0.8;
+  } else if (RegExp(r'^[a-z]*$').hasMatch(password)) {
     charsetBonus = 1.0;
   } else if (RegExp(r'^[a-z0-9]*$').hasMatch(password)) {
     charsetBonus = 1.2;
