@@ -4,7 +4,7 @@ import 'package:password_strength/password_strength.dart';
 void main() {
   // Read a password from stdin.
   print('Please enter a password:');
-  final password = stdin.readLineSync();
+  final password = stdin.readLineSync()!;
 
   // Estimate the password's strength.
   double strength = estimatePasswordStrength(password);
