@@ -1,3 +1,7 @@
+## 0.2.0
+
+* Add support for null-safety (thank you to [chimon2000](https://github.com/chimon2000)!)
+
 ## 0.1.2
 
 * Fix repository link
