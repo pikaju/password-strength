@@ -3,7 +3,7 @@ double estimateCommonDictionaryStrength(String password) {
   return _dictionary.contains(password) ? 0.0 : 1.0;
 }
 
-final _dictionary = Set.from([
+const _dictionary = <String>{
   '123456',
   'password',
   '12345678',
@@ -10004,4 +10004,4 @@ final _dictionary = Set.from([
   'bubbles1',
   'brook',
   'brady',
-]);
+};
